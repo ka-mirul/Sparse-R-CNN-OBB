@@ -55,14 +55,7 @@ pip install opencv-python scipy pillow matplotlib pycocotools
 pip install -e .
 ```
 
-4. Evaluate RSparseR-CNN
-```
-python projects/RSparseRCNN/train_net.py --num-gpus 2 \
-    --config-file projects/SparseRCNN/configs/sparsercnn.res50.100pro.3x.yaml \
-    --eval-only MODEL.WEIGHTS path/to/model.pth
-```
-
-5. Visualize RSparseR-CNN
+4. Demo
 ```    
 python demo/demo.py\
     --config-file projects/Sparse_RCNN_OBB/configs/sparse_rcnn_obb.res50.300pro.RSDD.yaml \
@@ -71,7 +64,7 @@ python demo/demo.py\
 ```
 If everything is correct, you should have demo_output.jpg like below
 
-![Demo Output](demo_output.jpg)
+<img src="demo_output.jpg" alt="Demo Output" width="300"/>
 
 ## 🧠 Training with Custom Dataset (Including RSDD-SAR)
 See the [guide](./TRAINING.md) for custom dataset training.
@@ -98,4 +91,3 @@ Cite us using the following BibTeX entries:
 }
 
 ```
-
