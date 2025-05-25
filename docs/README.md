@@ -1,5 +1,5 @@
 ## Sparse R-CNN OBB: Ship Target Detection in SAR Images Based on Oriented Sparse Learnable Proposals
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ![](readme/Overall_architecture.png)
 ## Paper (IEEE JSTARS)
@@ -14,10 +14,18 @@ The detection head of the baseline model, Sparse R-CNN, is re-designed to enable
 We also fine-tune the model on RSDD-SAR dataset and provide a performance comparison to state-of-the-art models.
 Experimental results shows that R-Sparse R-CNN achieves outstanding performance, surpassing other models on both inshore and offshore scenarios. 
 
-## Installation
-The code can be downloaded via zenodo.org.
-The codebases are built on top of [Detectron2](https://github.com/facebookresearch/detectron2) and [DETR](https://github.com/facebookresearch/detr).
+## 🧱 Built Upon
 
+This codebase is built on top of:
+
+- [Detectron2](https://github.com/facebookresearch/detectron2)
+- [DETR](https://github.com/facebookresearch/detr)
+- [Sparse R-CNN](https://github.com/PeizeSun/SparseR-CNN) — which serves as our baseline
+
+We have modified and extended Sparse R-CNN to develop **Sparse R-CNN OBB**, incorporating additional functionality and structural improvements described in our work.
+
+
+## 💻 Installation
 #### Requirements
 - Linux or macOS with Python ≥ 3.6
 - PyTorch ≥ 1.5 and [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
@@ -25,7 +33,7 @@ The codebases are built on top of [Detectron2](https://github.com/facebookresear
 - OpenCV is optional and needed by demo and visualization
 
 #### Steps
-1. Download
+1. Download \
    Download codes from this repo and pretrained weights here: zenodo.org
    
 1. Create your virtual environment \
@@ -63,11 +71,14 @@ python demo/demo.py\
 ```
 If everything is correct, you should have demo_output.jpg like below
 
-## Training ousing your own data
-Training your own data can be read here
-## License
+![Demo Output](demo_output.jpg)
 
-RSparseR-CNN is released under MIT License.
+## 🧠 Training with Custom Dataset (Including RSDD-SAR)
+See the [guide](./TRAINING.md) for custom dataset training.
+
+## 📜 License
+
+SparseR-CNN-OBB is released under **GNU General Public License v3.0 (GPL-3.0)**.
 
 
 ## Citing
