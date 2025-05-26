@@ -66,7 +66,7 @@ If everything is correct, you should have demo_output.jpg like below
 <img src="demo_output.jpg" alt="Demo Output" width="300"/>
 
 ## 🧠 Training with Custom Dataset (Including RSDD-SAR)
-See the [guide](./TRAINING.md) for custom dataset training.
+See the [guide](./Training.md) for custom dataset training.
 
 ## 📜 License
 
