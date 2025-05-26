@@ -23,7 +23,7 @@ Depending on how your ground-truth boxes and labels are structured, you may need
 For the RSDD-SAR dataset, an example implementation can be found in [dataset_mapper.py](./projects/Sparse_RCNN_OBB/sparsercnn_obb/dataset_mapper.py) and [rsdd_dataset.py](./projects/Sparse_RCNN_OBB/sparsercnn_obb/rsdd_dataset.py).
 
 ### 4. Configuration Files
-Set the correct dataset path in [config.py](./projects/Sparse_RCNN_OBB/sparsercnn_obb/config.py), and configure the model properties in [Base-SparseRCNN-OBB.yaml](./projects/Sparse_RCNN_OBB/configs/Base-SparseRCNN-OBB.yaml) and [sparse_rcnn_obb.res50.300pro.RSDD.yaml](./projects/Sparse_RCNN_OBB/configs/sparse_rcnn_obb.res50.300pro.RSDD.yaml).
+Set the correct dataset path in [config.py](./projects/Sparse_RCNN_OBB/sparsercnn_obb/config.py), and configure the model and training properties in [Base-SparseRCNN-OBB.yaml](./projects/Sparse_RCNN_OBB/configs/Base-SparseRCNN-OBB.yaml) and [sparse_rcnn_obb.res50.300pro.RSDD.yaml](./projects/Sparse_RCNN_OBB/configs/sparse_rcnn_obb.res50.300pro.RSDD.yaml).
 
 ### 5. Run the Training Script
 ```    
