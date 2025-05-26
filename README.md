@@ -4,7 +4,7 @@
 ## Publication link: ICIP 2025
 [Sparse R-CNN OBB: Ship Target Detection in SAR Images Based on Oriented Sparse Learnable Proposals](https://arxiv.org/abs/2409.07973)
 
-## 🧱 Built Upon
+## Built Upon
 
 This codebase is built on top of:
 
@@ -15,7 +15,7 @@ This codebase is built on top of:
 We have modified and extended Sparse R-CNN to develop **Sparse R-CNN OBB**, incorporating additional functionality and structural improvements described in our work.
 
 
-## 💻 Installation
+## Installation
 #### Requirements
 - Linux or macOS with Python ≥ 3.6
 - PyTorch ≥ 1.5 and [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
@@ -57,15 +57,15 @@ If everything is correct, you should have `demo_output.jpg` like below:
 
 <img src="demo_output.jpg" alt="Demo Output" width="300"/>
 
-## 🧠 Training with Custom Dataset (Including RSDD-SAR)
+## Training with Custom Dataset (Including RSDD-SAR)
 See the [guide](./Training.md) for custom dataset training.
 
-## 📜 License
+## License
 
 SparseR-CNN-OBB is released under **GNU General Public License v3.0 (GPL-3.0)**.
 
 
-## 📚 Citation
+## Citation
 Cite us using the following BibTeX entries:
 ```BibTeX
 
