@@ -8,10 +8,10 @@ Set the `DATASET_phase` parameter to `train` or `"test"` as needed.
 The script will generate the required JSON files if successful.
 
 
-- [RSDD_train_inshore_COCO_OBB_Detectron.json](./RSDD_train_inshore_COCO_OBB_Detectron.json) 
-- [RSDD_test_COCO_OBB_Detectron.json](./RSDD_train_inshore_COCO_OBB_Detectron.json) 
-- [RSDD_test_inshore_COCO_OBB_Detectron.json](./RSDD_train_inshore_COCO_OBB_Detectron.json) 
-- [RSDD_test_offshore_COCO_OBB_Detectron.son](./RSDD_train_inshore_COCO_OBB_Detectron.json) 
+- [RSDD_train_COCO_OBB_Detectron.json](./RSDD_train_COCO_OBB_Detectron.json) 
+- [RSDD_test_COCO_OBB_Detectron.json](./RSDD_test_COCO_OBB_Detectron.json) 
+- [RSDD_test_inshore_COCO_OBB_Detectron.json](./RSDD_test_inshore_COCO_OBB_Detectron.json) 
+- [RSDD_test_offshore_COCO_OBB_Detectron.json](./RSDD_test_offshore_COCO_OBB_Detectron.json) 
 
 ### 2. Register the Dataset
 Modify [builtin_meta.py](./detectron2/data/datasets/builtin_meta.py) to register your dataset.  
