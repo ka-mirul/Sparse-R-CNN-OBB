@@ -1,8 +1,7 @@
 ## Training on RSDD-SAR and Custom Dataset
 The following guide explains how to implement Sparse R-CNN-OBB with a custom dataset.  
-While the setup is demonstrated using the RSDD-SAR dataset, the overall process can be followed in the same way for other datasets.
-
-
+While the setup is demonstrated using the RSDD-SAR dataset, the overall process can be followed in the same way for other datasets. \
+Ensure that the installation has been completed and verified by following the step-by-step instructions in [Installation Guide](./README.md) before proceeding.
 
 ### 1. Ground-truth Conversion
 The RSDD-SAR dataset can be downloaded [here](https://github.com/makabakasu/RSDD-SAR-OPEN). \
