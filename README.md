@@ -86,7 +86,7 @@ Cite us using the following BibTeX entries:
 }
 ```
 ## Related Works
-[[R-Sparse R-CNN](https://github.com/ka-mirul/R-Sparse-R-CNN)] – We’ve released an improved version of **R-Sparse R-CNN OBB**, called **R-Sparse R-CNN**.  
+**[[R-Sparse R-CNN](https://github.com/ka-mirul/R-Sparse-R-CNN)]** – We’ve released an improved version of **R-Sparse R-CNN OBB**, called **R-Sparse R-CNN**.  
 It introduces novel Background-Aware Sparse Proposals (BAP) to enhance performance in inshore ship detection.  
 Read more in our [arXiv paper](https://www.arxiv.org/abs/2504.18959).
 
