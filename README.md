@@ -1,5 +1,7 @@
 ## Sparse R-CNN OBB: Ship Target Detection in SAR Images Based on Oriented Sparse Learnable Proposals
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)  [![DOI](https://zenodo.org/badge/990307868.svg)](https://doi.org/10.5281/zenodo.15514649) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15514670.svg)](https://doi.org/10.5281/zenodo.15514670)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)  [![DOI](https://zenodo.org/badge/990307868.svg)](https://zenodo.org/records/15519225) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15514670.svg)](https://doi.org/10.5281/zenodo.15514670) [![arXiv](https://img.shields.io/badge/arXiv-<2409.07973>-b31b1b.svg)](https://arxiv.org/abs/2409.07973) [![Published in IEEE ICIP](https://img.shields.io/badge/IEEE%20ICIP-Published-blue)](https://doi.org/<your_DOI_here>)
+
+![](props/model_architecture.png)
 
 ## Publication link: ICIP 2025
 [Sparse R-CNN OBB: Ship Target Detection in SAR Images Based on Oriented Sparse Learnable Proposals](https://arxiv.org/abs/2409.07973)
@@ -17,10 +19,10 @@ We have modified and extended Sparse R-CNN to develop **Sparse R-CNN OBB**, inco
 
 ## Installation
 #### Requirements
-- Linux or macOS with Python ≥ 3.6
-- PyTorch ≥ 1.5 and [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
-  You can install them together at [pytorch.org](https://pytorch.org) to make sure of this
-- OpenCV is optional and needed by demo and visualization
+- Linux or macOS with Python ≥ 3.6.
+- You’ll need PyTorch ≥ 1.5 along with a [torchvision](https://github.com/pytorch/vision/) version that matches your PyTorch installation.  
+For best compatibility, install both from [pytorch.org](https://pytorch.org).
+- OpenCV is optional and needed by demo and visualization.
 
 #### Steps
 1. Download \
@@ -57,12 +59,14 @@ If everything is correct, you should have `demo_output.jpg` like below:
 
 <img src="demo_output.jpg" alt="Demo Output" width="300"/>
 
+**Note:** `RSDD_test_sample_34_24_16.jpg` is an example image from the RSDD-SAR test set and is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
 ## Training with Custom Dataset (Including RSDD-SAR)
 See the [guide](./Training.md) for custom dataset training.
 
 ## License
 
-SparseR-CNN-OBB is released under **GNU General Public License v3.0 (GPL-3.0)**.
+Sparse R-CNN-OBB is released under **GNU General Public License v3.0 (GPL-3.0)**.
 
 
 ## Citation
@@ -79,3 +83,10 @@ Cite us using the following BibTeX entries:
       url={https://arxiv.org/abs/2409.07973}, 
 }
 ```
+## Related Works
+[[R-Sparse R-CNN](https://github.com/ka-mirul/R-Sparse-R-CNN)] – We’ve released an improved version of **R-Sparse R-CNN OBB**, called **R-Sparse R-CNN**.  
+It introduces novel Background-Aware Sparse Proposals (BAP) to enhance performance in inshore ship detection.  
+Read more in our [arXiv paper](https://www.arxiv.org/abs/2504.18959).
+
+
+
