@@ -1,16 +1,13 @@
 ## Training on RSDD-SAR and Custom Dataset
-The following guide explains how to implement Sparse R-CNN-OBB with a custom dataset.  
-While the setup is demonstrated using the RSDD-SAR dataset, the overall process can be followed in the same way for other datasets. \
-Ensure that the installation has been completed and verified by following the step-by-step instructions in [Installation Guide](./README.md) before proceeding.
+This guide shows how to use Sparse R-CNN-OBB with a custom dataset, using [RSDD-SAR](https://github.com/makabakasu/RSDD-SAR-OPEN) as an example. The same steps apply to other datasets.
+Make sure the installation is complete and verified by following the steps in the [Installation Guide](./README.md) before proceeding.
+
+
 
 ### 1. Ground-truth Conversion
 The RSDD-SAR dataset can be downloaded [here](https://github.com/makabakasu/RSDD-SAR-OPEN). \
-To train and evaluate on the RSDD-SAR dataset, convert the annotations to COCO format by running [convert_RSDD_to_COCO_Detectron.py](./convert_RSDD_to_COCO_Detectron.py).  
-Set the `DATASET_phase` parameter to `train` or `"test"` as needed.  
-The script will generate the required JSON files if successful.
-
-
-- [RSDD_train_COCO_OBB_Detectron.json](./RSDD_train_COCO_OBB_Detectron.json) 
+To train and evaluate using RSDD-SAR dataset, convert the ground truth annotations to COCO format by running [convert_RSDD_to_COCO_Detectron.py](./convert_RSDD_to_COCO_Detectron.py).  
+Set the `DATASET_phase` parameter to `"test"`, `"test_inshore"`, or `"test_offshore"` as needed. The script will generate the required JSON files upon success.
 - [RSDD_test_COCO_OBB_Detectron.json](./RSDD_test_COCO_OBB_Detectron.json) 
 - [RSDD_test_inshore_COCO_OBB_Detectron.json](./RSDD_test_inshore_COCO_OBB_Detectron.json) 
 - [RSDD_test_offshore_COCO_OBB_Detectron.json](./RSDD_test_offshore_COCO_OBB_Detectron.json) 
@@ -32,3 +29,4 @@ Set the correct dataset path in [config.py](./projects/Sparse_RCNN_OBB/sparsercn
 python projects/Sparse_RCNN_OBB/train_net.py \
  --num-gpus 1 --config-file projects/Sparse_RCNN_OBB/configs/sparse_rcnn_obb.res50.300pro.RSDD.yaml
 ```
+Once training is finished, the trained model will be saved at `output/model_final.pth`.
