@@ -3,12 +3,10 @@
 
 import os
 import sys
-import sahi
-from sahi.utils.coco import Coco, CocoCategory, CocoImage, CocoAnnotation
+from sahi.utils.coco import Coco, CocoCategory, CocoImage
 from RotatedCocoAnnotation import CocoAnnotationOBB
 from sahi.utils.file import save_json
 from PIL import Image
-import cv2
 import numpy as np
 
 if sys.version_info[0] == 2:
@@ -16,13 +14,12 @@ if sys.version_info[0] == 2:
 else:
     import xml.etree.ElementTree as ET
 
-import torch
 
 #this is to convert RSDD to json format
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-
-DATA_PATH  = r'D:\DATASET\RSDD-SAR\RSDD-SAR'
-DATASET_phase = 'train'
+DATA_PATH  = r"/home/mikicil/xo23898/SHIP_DETECTION/DATASET/RSDD-SAR"
+DATASET_phase = 'test'
 
 image_indexname_file = os.path.join(os.path.join(DATA_PATH,'ImageSets'), DATASET_phase + '.txt')
 image_folder_path = os.path.join(DATA_PATH, 'JPEGImages')
@@ -59,8 +56,6 @@ for image_name in image_names:
 		#RSDD -90 to +90, zero at West, CW -- see page 584 of RSDD paper
 		#Detectron : -180 to +180, zero at North, CCW
 		angle = -(90 + angle)
-		
-		
 
 		coco_image.add_annotation(
 		CocoAnnotationOBB(
@@ -78,8 +73,43 @@ for image_name in image_names:
 	
 	n_image+=1
 
-output_json = os.path.join(DATA_PATH,'RSDD_' + DATASET_phase + '_COCO_OBB_Detectron.json')
+output_json = os.path.join(current_dir,'RSDD_' + DATASET_phase + '_COCO_OBB_Detectron.json')
 save_json(data=coco.json, save_path=output_json)
+
+
+
+import json
+import time
+from collections import OrderedDict
+
+# Load existing JSON file
+with open(output_json, "r") as f:
+    data = json.load(f)
+
+# Get today's date and year
+today_str = time.strftime("%Y-%m-%d")
+current_year = int(time.strftime("%Y"))
+
+# Add or overwrite the "info" field
+data["info"] = {
+    "description": "RSDD COCO",
+    "version": "1.0",
+    "year": current_year,
+    "contributor": "Kamirul",
+    "date_created": today_str
+}
+
+# Move "info" to
+data_ordered = OrderedDict()
+data_ordered["info"] = data["info"]
+for k, v in data.items():
+    if k != "info":
+        data_ordered[k] = v
+
+# Save the updated JSON
+with open(output_json, "w") as f:
+    json.dump(data_ordered, f, indent=2)
+
 
 print('#'*60)
 print('DONE')
