@@ -67,7 +67,7 @@ class SparseRCNN_OBB(nn.Module):
         nn.init.constant_(self.init_proposal_boxes.weight[:, :2], 0.50) # centre
         nn.init.constant_(self.init_proposal_boxes.weight[:, 2], 0.25) # wh
         nn.init.constant_(self.init_proposal_boxes.weight[:, 3], 0.50) # wh
-        nn.init.constant_(self.init_proposal_boxes.weight[:, 4], -45.00) # 45/180 (-180 to 180)
+        nn.init.constant_(self.init_proposal_boxes.weight[:, 4], -1.00) # 45/180 (-180 to 180)
         #'''
         
         
